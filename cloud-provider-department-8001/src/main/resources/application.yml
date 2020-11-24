@@ -1,0 +1,15 @@
+server:
+  port: 8001
+mybatis:
+  type-aliases-package: vip.epss.domain
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+spring:
+  application:
+    name: cloud-provider-department
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///spring_cloud_test?serverTimezone=Asia/Shanghai&unicode=true&characterEncoding=UTF-8
+    username: root
+    password: P@ssw0rd

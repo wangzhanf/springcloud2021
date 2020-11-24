@@ -1,0 +1,12 @@
+server:
+  port: 7001
+#Eureka的配置
+eureka:
+  instance:
+    hostname: localhost #eureka服务端的实例名称
+  client:
+    register-with-eureka: false     #false表示不向注册中心注册自己。
+    fetch-registry: false     #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务,客户端该处是不是应该为true呢
+    service-url:
+      #控制中心  本例中可以访问控制台监控
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

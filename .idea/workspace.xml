@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bda64ae6-8931-400a-acd3-07fe30d46919" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cloud-api-commons/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/vip/epss/domain/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/vip/epss/domain/MessageAndData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-department-80/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-department-80/src/main/java/vip/epss/DepartmentConsumer_80.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-department-80/src/main/java/vip/epss/config/ConfigBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-department-80/src/main/java/vip/epss/controller/DepartmentConsumerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-department-80/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-eureka-7001/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-eureka-7001/src/main/java/vip/epss/EurekaSingleServer_7001.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-eureka-7001/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-eureka-7004/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-eureka-7004/src/main/java/vip/epss/EurekaClusterServer_7004.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-eureka-7004/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-eureka-7005/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-eureka-7005/src/main/java/vip/epss/EurekaClusterServer_7005.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-eureka-7005/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-eureka-7006/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-eureka-7006/src/main/java/vip/epss/EurekaClusterServer_7006.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-eureka-7006/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/java/vip/epss/DepartmentProvider_8001.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/java/vip/epss/controller/DepartmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/java/vip/epss/dao/DepartmentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/java/vip/epss/service/DepartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/java/vip/epss/service/impl/DepartmentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/resources/mybatis/mapper/DepartmentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/java/vip/epss/DepartmentProvider_8005.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/java/vip/epss/controller/DepartmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/java/vip/epss/dao/DepartmentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/java/vip/epss/service/DepartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/java/vip/epss/service/impl/DepartmentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/resources/mybatis/mapper/DepartmentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/java/vip/epss/DepartmentProvider_8008.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/java/vip/epss/controller/DepartmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/java/vip/epss/dao/DepartmentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/java/vip/epss/service/DepartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/java/vip/epss/service/impl/DepartmentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/resources/mybatis/mapper/DepartmentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="D:\developPlat\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kionbT2YYknAJt77uqzO8KyRtf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.3873563" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="vip.epss.domain" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\study\springcloud\springcloud2021" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DepartmentProvider_8008">
+    <configuration name="DepartmentConsumer_80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-consumer-department-80" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vip.epss.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentConsumer_80" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentProvider_8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-provider-department-8001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vip.epss.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentProvider_8001" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentProvider_8005" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-provider-department-8005" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vip.epss.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentProvider_8005" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentProvider_8008" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-provider-department-8008" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vip.epss.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentProvider_8008" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaClusterServer_7004" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-eureka-7004" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.EurekaClusterServer_7004" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaClusterServer_7005" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-eureka-7005" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.EurekaClusterServer_7005" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaClusterServer_7006" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-eureka-7006" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.EurekaClusterServer_7006" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaSingleServer_7001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-eureka-7001" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.EurekaSingleServer_7001" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.DepartmentProvider_8008" />
+        <item itemvalue="Spring Boot.DepartmentProvider_8005" />
+        <item itemvalue="Spring Boot.DepartmentProvider_8001" />
+        <item itemvalue="Spring Boot.DepartmentConsumer_80" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bda64ae6-8931-400a-acd3-07fe30d46919" name="Default Changelist" comment="" />
+      <created>1606192940541</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606192940541</updated>
+      <workItem from="1606192941899" duration="31641000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="621" y="353" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606194505668">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="621" y="353" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606194505668" />
+    <state x="1085" y="415" key="#com.intellij.ide.util.MemberChooser" timestamp="1606201271632">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1085" y="415" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606201271632" />
+    <state x="1060" y="454" key="FileChooserDialogImpl" timestamp="1606196976245">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1060" y="454" key="FileChooserDialogImpl/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606196976245" />
+    <state width="2044" height="371" key="GridCell.Tab.0.bottom" timestamp="1606235655765">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2044" height="371" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
+    <state width="2044" height="371" key="GridCell.Tab.0.center" timestamp="1606235655765">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2044" height="371" key="GridCell.Tab.0.center/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
+    <state width="2044" height="371" key="GridCell.Tab.0.left" timestamp="1606235655765">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2044" height="371" key="GridCell.Tab.0.left/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
+    <state width="2044" height="371" key="GridCell.Tab.0.right" timestamp="1606235655765">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2044" height="371" key="GridCell.Tab.0.right/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
+    <state width="2044" height="371" key="GridCell.Tab.1.bottom" timestamp="1606235655765">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2044" height="371" key="GridCell.Tab.1.bottom/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
+    <state width="2044" height="371" key="GridCell.Tab.1.center" timestamp="1606235655765">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2044" height="371" key="GridCell.Tab.1.center/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
+    <state width="2044" height="371" key="GridCell.Tab.1.left" timestamp="1606235655765">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2044" height="371" key="GridCell.Tab.1.left/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
+    <state width="2044" height="371" key="GridCell.Tab.1.right" timestamp="1606235655765">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2044" height="371" key="GridCell.Tab.1.right/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
+    <state x="851" y="514" key="Registry" timestamp="1606200051812">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="851" y="514" key="Registry/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606200051812" />
+    <state x="614" y="311" key="SettingsEditor" timestamp="1606200243391">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="614" y="311" key="SettingsEditor/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606200243391" />
+    <state x="468" y="411" width="972" height="578" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1606195185726">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="468" y="411" width="972" height="578" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606195185726" />
+    <state x="650" y="359" key="new project wizard" timestamp="1606226250091">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="650" y="359" key="new project wizard/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606226250091" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1606196448591">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606196448591" />
+  </component>
+</project>
