@@ -2,54 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bda64ae6-8931-400a-acd3-07fe30d46919" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cloud-api-commons/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/vip/epss/domain/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/vip/epss/domain/MessageAndData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-department-80/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-department-80/src/main/java/vip/epss/DepartmentConsumer_80.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-department-80/src/main/java/vip/epss/config/ConfigBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-department-80/src/main/java/vip/epss/controller/DepartmentConsumerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-department-80/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-eureka-7001/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-eureka-7001/src/main/java/vip/epss/EurekaSingleServer_7001.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-eureka-7001/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-eureka-7004/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-eureka-7004/src/main/java/vip/epss/EurekaClusterServer_7004.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-eureka-7004/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-eureka-7005/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-eureka-7005/src/main/java/vip/epss/EurekaClusterServer_7005.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-eureka-7005/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-eureka-7006/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-eureka-7006/src/main/java/vip/epss/EurekaClusterServer_7006.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-eureka-7006/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/java/vip/epss/DepartmentProvider_8001.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/java/vip/epss/controller/DepartmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/java/vip/epss/dao/DepartmentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/java/vip/epss/service/DepartmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/java/vip/epss/service/impl/DepartmentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/resources/mybatis/mapper/DepartmentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8001/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/java/vip/epss/DepartmentProvider_8005.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/java/vip/epss/controller/DepartmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/java/vip/epss/dao/DepartmentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/java/vip/epss/service/DepartmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/java/vip/epss/service/impl/DepartmentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/resources/mybatis/mapper/DepartmentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8005/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/java/vip/epss/DepartmentProvider_8008.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/java/vip/epss/controller/DepartmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/java/vip/epss/dao/DepartmentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/java/vip/epss/service/DepartmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/java/vip/epss/service/impl/DepartmentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/resources/mybatis/mapper/DepartmentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-department-8008/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,10 +60,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3873563" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -228,6 +181,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606192940541</updated>
       <workItem from="1606192941899" duration="31641000" />
+      <workItem from="1606273325652" duration="496000" />
     </task>
     <servers />
   </component>
@@ -238,6 +192,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="440" y="94" key="#Project_Structure" timestamp="1606273341265">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1606273341265" />
     <state x="621" y="353" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606194505668">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -286,9 +244,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="851" y="514" key="Registry/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606200051812" />
-    <state x="614" y="311" key="SettingsEditor" timestamp="1606200243391">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="461" y="231" key="SettingsEditor" timestamp="1606273821283">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="461" y="231" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606273821283" />
     <state x="614" y="311" key="SettingsEditor/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606200243391" />
     <state x="468" y="411" width="972" height="578" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1606195185726">
       <screen x="0" y="0" width="2560" height="1400" />
