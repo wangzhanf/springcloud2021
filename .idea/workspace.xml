@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bda64ae6-8931-400a-acd3-07fe30d46919" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classCode/.idea/$CACHE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classCode/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classCode/.idea/copyright/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classCode/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classCode/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classCode/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classCode/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classCode/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classCode/classCode.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classCode/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringCloud授课笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/SpringCloud授课笔记.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +69,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -181,7 +194,8 @@
       <option name="presentableId" value="Default" />
       <updated>1606192940541</updated>
       <workItem from="1606192941899" duration="31641000" />
-      <workItem from="1606273325652" duration="496000" />
+      <workItem from="1606273325652" duration="1180000" />
+      <workItem from="1606283981977" duration="2102000" />
     </task>
     <servers />
   </component>
@@ -204,9 +218,11 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1085" y="415" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606201271632" />
-    <state x="1060" y="454" key="FileChooserDialogImpl" timestamp="1606196976245">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="530" y="69" key="FileChooserDialogImpl" timestamp="1606293741587">
+      <screen x="0" y="0" width="1280" height="560" />
     </state>
+    <state x="530" y="69" key="FileChooserDialogImpl/0.0.1280.560@0.0.1280.560" timestamp="1606293741587" />
+    <state x="795" y="337" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606293503876" />
     <state x="1060" y="454" key="FileChooserDialogImpl/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606196976245" />
     <state width="2044" height="371" key="GridCell.Tab.0.bottom" timestamp="1606235655765">
       <screen x="0" y="0" width="2560" height="1400" />
@@ -244,18 +260,19 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="851" y="514" key="Registry/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606200051812" />
-    <state x="461" y="231" key="SettingsEditor" timestamp="1606273821283">
+    <state x="383" y="118" key="SettingsEditor" timestamp="1606293507285">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="231" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606273821283" />
+    <state x="383" y="118" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606293507285" />
     <state x="614" y="311" key="SettingsEditor/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606200243391" />
     <state x="468" y="411" width="972" height="578" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1606195185726">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="468" y="411" width="972" height="578" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606195185726" />
-    <state x="650" y="359" key="new project wizard" timestamp="1606226250091">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="23" y="7" width="1251" height="489" key="new project wizard" timestamp="1606293766658">
+      <screen x="0" y="0" width="1280" height="560" />
     </state>
+    <state x="23" y="7" width="1251" height="489" key="new project wizard/0.0.1280.560@0.0.1280.560" timestamp="1606293766658" />
     <state x="650" y="359" key="new project wizard/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606226250091" />
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1606196448591">
       <screen x="0" y="0" width="2560" height="1400" />

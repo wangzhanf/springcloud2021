@@ -30,6 +30,14 @@ Ajax
 
 Json
 
+
+
+### 
+
+
+
+
+
 # 微服务架构概述
 
 ## 微服务产生的背景
@@ -566,4 +574,60 @@ Eureka保证的是AP,所有节点平等
 启动集群 7004 7005 7006  和服务提供者 8008 测试
 
 访问  http://eureka7004.com:7004/      http://eureka7005.com:7005/    http://eureka7006.com:7006/ 
+
+
+
+
+
+
+
+
+
+
+
+学习资料下载
+
+## git@github.com:wangzhanf/springcloud2021.git
+
+## 使用命令
+
+## git  clone git@github.com:wangzhanf/springcloud2021.git
+
+## 克隆
+
+## wangzhanf     我的github账号     王占峰   
+
+## 1	注册github账号
+
+## 2	配置git
+
+### git config --global user.name "wangzhanf"
+
+### $ git config --global user.email wangzhanf@126.com
+
+### 3	产生秘钥
+
+###  ssh-keygen -t rsa -C "wangzhanf@126.com"
+
+### 4	进入  用户宿主目录    找到  .ssh  下的id_rsa.pub   拷贝其中的内容  粘贴到   github上      
+
+### 5	通过命令行方式访问远程仓库
+
+
+
+# 开发平台的基本构建
+
+IDEA    下载      https://www.jetbrains.com/idea/
+
+## 基本的配置
+
+### 配置maven
+
+## STS的workspace相当于idea中的project
+
+## STS的project 相当于 idea中的  module
+
+
+
+
 
