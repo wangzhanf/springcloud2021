@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bda64ae6-8931-400a-acd3-07fe30d46919" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/classCode/.idea/$CACHE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classCode/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classCode/.idea/copyright/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classCode/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classCode/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classCode/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classCode/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classCode/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classCode/classCode.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classCode/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringCloud授课笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/SpringCloud授课笔记.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,8 +164,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.DepartmentProvider_8008" />
         <item itemvalue="Spring Boot.DepartmentProvider_8005" />
+        <item itemvalue="Spring Boot.DepartmentProvider_8008" />
         <item itemvalue="Spring Boot.DepartmentProvider_8001" />
         <item itemvalue="Spring Boot.DepartmentConsumer_80" />
       </list>
@@ -196,6 +184,8 @@
       <workItem from="1606192941899" duration="31641000" />
       <workItem from="1606273325652" duration="1180000" />
       <workItem from="1606283981977" duration="2102000" />
+      <workItem from="1606342146893" duration="1088000" />
+      <workItem from="1606376325188" duration="1802000" />
     </task>
     <servers />
   </component>
@@ -224,38 +214,38 @@
     <state x="530" y="69" key="FileChooserDialogImpl/0.0.1280.560@0.0.1280.560" timestamp="1606293741587" />
     <state x="795" y="337" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606293503876" />
     <state x="1060" y="454" key="FileChooserDialogImpl/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606196976245" />
-    <state width="2044" height="371" key="GridCell.Tab.0.bottom" timestamp="1606235655765">
+    <state width="2044" height="371" key="GridCell.Tab.0.bottom" timestamp="1606377622472">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
-    <state width="2044" height="371" key="GridCell.Tab.0.center" timestamp="1606235655765">
+    <state width="2044" height="371" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622472" />
+    <state width="2044" height="371" key="GridCell.Tab.0.center" timestamp="1606377622472">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.0.center/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
-    <state width="2044" height="371" key="GridCell.Tab.0.left" timestamp="1606235655765">
+    <state width="2044" height="371" key="GridCell.Tab.0.center/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622472" />
+    <state width="2044" height="371" key="GridCell.Tab.0.left" timestamp="1606377622472">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.0.left/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
-    <state width="2044" height="371" key="GridCell.Tab.0.right" timestamp="1606235655765">
+    <state width="2044" height="371" key="GridCell.Tab.0.left/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622472" />
+    <state width="2044" height="371" key="GridCell.Tab.0.right" timestamp="1606377622472">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.0.right/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
-    <state width="2044" height="371" key="GridCell.Tab.1.bottom" timestamp="1606235655765">
+    <state width="2044" height="371" key="GridCell.Tab.0.right/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622472" />
+    <state width="2044" height="371" key="GridCell.Tab.1.bottom" timestamp="1606377622473">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.1.bottom/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
-    <state width="2044" height="371" key="GridCell.Tab.1.center" timestamp="1606235655765">
+    <state width="2044" height="371" key="GridCell.Tab.1.bottom/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622473" />
+    <state width="2044" height="371" key="GridCell.Tab.1.center" timestamp="1606377622473">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.1.center/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
-    <state width="2044" height="371" key="GridCell.Tab.1.left" timestamp="1606235655765">
+    <state width="2044" height="371" key="GridCell.Tab.1.center/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622473" />
+    <state width="2044" height="371" key="GridCell.Tab.1.left" timestamp="1606377622473">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.1.left/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
-    <state width="2044" height="371" key="GridCell.Tab.1.right" timestamp="1606235655765">
+    <state width="2044" height="371" key="GridCell.Tab.1.left/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622473" />
+    <state width="2044" height="371" key="GridCell.Tab.1.right" timestamp="1606377622473">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.1.right/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606235655765" />
+    <state width="2044" height="371" key="GridCell.Tab.1.right/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622473" />
     <state x="851" y="514" key="Registry" timestamp="1606200051812">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

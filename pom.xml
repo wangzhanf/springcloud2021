@@ -20,6 +20,7 @@
         <module>cloud-eureka-7005</module>
         <module>cloud-eureka-7006</module>
         <module>cloud-provider-department-8008</module>
+
     </modules>
 
     <!--    打包方式-->
