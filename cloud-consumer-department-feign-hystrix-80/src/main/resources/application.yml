@@ -1,0 +1,14 @@
+server:
+  port: 80
+#Eureka配置
+eureka:
+  client:
+    register-with-eureka: false     #false表示不向注册中心注册自己。
+    service-url:
+      #可以从以下服务中心列表中获取对应的服务
+      defaultZone: http://eureka7004.com:7004/eureka/,http://eureka7005.com:7005/eureka/,http://eureka7006.com:7006/eureka/
+
+#启用服务降级
+feign:
+  hystrix:
+    enabled: true

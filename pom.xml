@@ -7,31 +7,76 @@
     <groupId>vip.epss</groupId>
     <artifactId>springcloud2021</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <!--    打包方式-->
+    <packaging>pom</packaging>
     <modules>
-        <!--        初始的服务者和消费者-->
+        <!--1   公用的模块-->
         <module>cloud-api-commons</module>
+        <!--2   初始的服务者和消费者-->
         <module>cloud-provider-department-8001</module>
         <module>cloud-consumer-department-80</module>
-        <!--        单机版的Eureka配置-->
+        <!--3   单机版的Eureka配置-->
         <module>cloud-eureka-7001</module>
         <module>cloud-provider-department-8005</module>
-        <!--        集群版的Eureka配置-->
+        <!--4   集群版的Eureka配置-->
         <module>cloud-eureka-7004</module>
         <module>cloud-eureka-7005</module>
         <module>cloud-eureka-7006</module>
         <module>cloud-provider-department-8008</module>
-
+        <!--5   Ribbon实现负载均衡-->
+        <module>cloud-consumer-department-ribbon-80</module>
+        <!--        <module>cloud-eureka-7004</module>-->
+        <!--        <module>cloud-eureka-7005</module>-->
+        <!--        <module>cloud-eureka-7006</module>-->
+        <!--        <module>cloud-provider-department-8008</module>-->
+        <module>cloud-provider-department-8009</module>
+        <module>cloud-provider-department-8010</module>
+        <!--6   Ribbon使用其他负载均衡算法  本例使用随机算法-->
+        <module>cloud-consumer-department-ribbon-random-80</module>
+        <!--        <module>cloud-eureka-7004</module>-->
+        <!--        <module>cloud-eureka-7005</module>-->
+        <!--        <module>cloud-eureka-7006</module>-->
+        <!--        <module>cloud-provider-department-8008</module>-->
+        <!--        <module>cloud-provider-department-8009</module>-->
+        <!--        <module>cloud-provider-department-8010</module>-->
+        <!--7   Ribbon使用其他负载均衡算法  自定义负载均衡算法-->
+        <module>cloud-consumer-department-ribbon-myrule-80</module>
+        <!--        <module>cloud-eureka-7004</module>-->
+        <!--        <module>cloud-eureka-7005</module>-->
+        <!--        <module>cloud-eureka-7006</module>-->
+        <!--        <module>cloud-provider-department-8008</module>-->
+        <!--        <module>cloud-provider-department-8009</module>-->
+        <!--        <module>cloud-provider-department-8010</module>-->
+        <!--8   使用Feign做负载均衡-->
+        <module>cloud-consumer-department-feign-80</module>
+        <!--        <module>cloud-eureka-7004</module>-->
+        <!--        <module>cloud-eureka-7005</module>-->
+        <!--        <module>cloud-eureka-7006</module>-->
+        <!--        <module>cloud-provider-department-8008</module>-->
+        <!--        <module>cloud-provider-department-8009</module>-->
+        <!--        <module>cloud-provider-department-8010</module>-->
+        <!--9   使用Hystrix做服务熔断[服务端的主要工作]-->
+        <module>cloud-provider-department-hystrix-8014</module>
+        <!--        <module>cloud-consumer-department-feign-80</module>-->
+        <!--        <module>cloud-eureka-7004</module>-->
+        <!--        <module>cloud-eureka-7005</module>-->
+        <!--        <module>cloud-eureka-7006</module>-->
+        <!--10   使用Hystrix做服务降级[客户端的主要工作]-->
+        <module>cloud-consumer-department-feign-hystrix-80</module>
+        <!--        <module>cloud-eureka-7004</module>-->
+        <!--        <module>cloud-eureka-7005</module>-->
+        <!--        <module>cloud-eureka-7006</module>-->
+        <!--        <module>cloud-provider-department-hystrix-8014</module>-->
     </modules>
 
-    <!--    打包方式-->
-    <packaging>pom</packaging>
+
 
     <!--    属性定义-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-<!--        <project.version>1.0-SNAPSHOT</project.version>-->
+        <!--        <project.version>1.0-SNAPSHOT</project.version>-->
         <junit.version>4.12</junit.version>
         <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.16.18</lombok.version>
@@ -116,6 +161,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.3.5.RELEASE</version>
                 <configuration>
                     <fork>true</fork>
                     <addResources>true</addResources>

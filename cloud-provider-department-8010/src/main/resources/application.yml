@@ -1,5 +1,5 @@
 server:
-  port: 8008
+  port: 8010
 mybatis:
   type-aliases-package: vip.epss.domain
   config-location: classpath:mybatis/mybatis-config.xml
@@ -10,7 +10,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql:///spring_cloud_test?serverTimezone=Asia/Shanghai&unicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql:///spring_cloud_test_3?serverTimezone=Asia/Shanghai&unicode=true&characterEncoding=UTF-8
     username: root
     password: P@ssw0rd
 eureka:
@@ -26,7 +26,7 @@ eureka:
       defaultZone: http://eureka7004.com:7004/eureka/,http://eureka7005.com:7005/eureka/,http://eureka7006.com:7006/eureka/
   instance:
     # 修改在服务器上该实例的描述信息
-    instance-id: cloud-provider-department-8008
+    instance-id: cloud-provider-department-8010
 
 # 使用actuator
 info:

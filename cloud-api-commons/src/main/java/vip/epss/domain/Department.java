@@ -15,7 +15,7 @@ import java.io.Serializable;
 //@Data
 //@NoArgsConstructor
 //@AllArgsConstructor
-@Accessors(chain = true)    //支持链式编程写法
+//@Accessors(chain = true)    //支持链式编程写法
 public class Department implements Serializable {
     private Integer did;
     private String dname;

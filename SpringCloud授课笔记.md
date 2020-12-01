@@ -28,13 +28,9 @@ Git
 
 Ajax
 
-Json
+Json 
 
-
-
-### 
-
-
+...
 
 
 
@@ -505,6 +501,12 @@ Eureka保证的是AP,所有节点平等
 
 # Eureka单机配置
 
+## 本例涉及模块
+
+cloud-eureka-7001
+
+cloud-provider-department-8005
+
 ## 创建Eureka服务器[cloud-eureka-7001]
 
 1 创建module
@@ -547,7 +549,17 @@ Eureka保证的是AP,所有节点平等
 
 # Eureka集群配置
 
-修改本机hosts文件进行本地域名映射或者真实DNS解析
+## 本例涉及模块
+
+cloud-eureka-7004
+
+cloud-eureka-7005
+
+cloud-eureka-7006
+
+cloud-provider-department-8008
+
+## 修改本机hosts文件进行本地域名映射或者真实DNS解析
 
 ```pro
 127.0.0.1	eureka7004.com
@@ -571,47 +583,372 @@ Eureka保证的是AP,所有节点平等
 
 ## 创建服务提供者[cloud-provider-department-8008]
 
+## 测试
+
 启动集群 7004 7005 7006  和服务提供者 8008 测试
 
 访问  http://eureka7004.com:7004/      http://eureka7005.com:7005/    http://eureka7006.com:7006/ 
 
 
 
+# Ribbon负载均衡
+
+## 本例涉及模块
+
+cloud-eureka-7004
+
+cloud-eureka-7005
+
+cloud-eureka-7006
+
+cloud-consumer-department-ribbon-80
+
+cloud-provider-department-8008
+
+cloud-provider-department-8009
+
+cloud-provider-department-8010
+
+## 负载均衡基础
+
+负载均衡概念
+
+Loader Balance
+
+### 负载均衡的分类
+
+集中制:例如Nginx的反向代理
+
+进程内LB:将LB逻辑集成到消费方,消费方从服务注册中心获知有哪些服务地址是可用的,然后选择一个合适的服务器, 例如Ribbon
+
+### 负载均衡的方式
+
+轮询
+
+随机
+
+### Ribbon
+
+Spring Cloud Ribbon是基于Netflix Ribbon实现的**客户端负载均衡工具**
+
+目的是提供系统的高可用性(HA)
+
+我们也可以**自定义负载均衡的算法**
+
+## 如何使用Ribbon[cloud-consumer-department-ribbon-80]
+
+1	创建对应module
+
+2	导入对应的坐标
+
+```xml
+<!--        Ribbon依赖,需要导入ribbon和Eureka Client依赖[因为Ribbon是消费端的负载均衡哦]-->
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-ribbon</artifactId>
+    <version>1.4.6.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>
+```
+
+3	修改配置文件
+
+```yaml
+server:
+  port: 80
+#Eureka配置
+eureka:
+  client:
+    register-with-eureka: false     #false表示不向注册中心注册自己。
+    service-url:
+      #可以从以下服务中心列表中获取对应的服务
+      defaultZone: http://eureka7004.com:7004/eureka/,http://eureka7005.com:7005/eureka/,http://eureka7006.com:7006/eureka/
+
+```
+
+4	修改主启动类,添加注解
+
+```java
+//Eureka和Ribbon整合后,消费端通过服务名调用具体的服务,而不需要指定具体哪个服务器和哪个端口提供具体服务
+//具体参考DepartmentConsumerController的配置
+@SpringBootApplication
+@EnableEurekaClient //
+```
+
+5	修改配置类,让获得RestTemplate对象通过Ribbon实现
+
+```java
+@Configuration
+public class ConfigBean {
+    @Bean
+    @LoadBalanced   //配置负载均衡实现RestTemplate
+    public RestTemplate getRestTemplate(){
+        return new RestTemplate();
+    }
+}
+```
+
+6	修改Controller,使得获得服务提供者使用服务名获得而不是固定地址获得
+
+```java
+//服务提供者的请求地址前缀,这是没有负载均衡时通过指定地址获得
+//    private static final String REST_URL_PREFIX = "http://localhost:8001";
+//这是通过Ribbon实现负载均衡时,通过服务名来访问实现负载均衡
+private static final String REST_URL_PREFIX = "http://CLOUD-PROVIDER-DEPARTMENT";
+```
+
+7	创建一个新的数据库以及数据表
+
+```mysql
+drop database if exists spring_cloud_test_2;
+create database if not exists spring_cloud_test_2;
+
+use spring_cloud_test_2;
+
+# 创建数据表
+create table department
+(
+    did       int auto_increment comment '部门编号'
+        primary key,
+    dname     varchar(50) null comment '部门名称',
+    db_source varchar(50) null comment '数据源'
+)
+    comment '部门表';
+
+# 插入测试数据
+insert into department (dname, db_source) VALUES ('教学部',DATABASE()),
+                                                 ('学生部',DATABASE()),
+                                                 ('后勤部',DATABASE()),
+                                                 ('财务部',DATABASE()),
+                                                 ('运输部',DATABASE()),
+                                                 ('采购部',DATABASE())
+;
+```
+
+8	创建多个服务提供者,本例中添加2个[cloud-provider-department-8009,cloud-provider-department-8010]
+
+​	记得要修改相应配置文件哦
+
+9	开启测试
+
+7004	7005	7006	8008	8009 	8010	ribbon-80
+
+http://localhost/consumer/department/list
 
 
 
+## Ribbon的算法
+
+### 使用其他负载均衡算法,本例使用随机算法[cloud-consumer-department-ribbon-random-80]
+
+1	将随机的算法注册进入IOC容器,具体内容参考对应模块的完整代码
+
+```java
+    //使用Ribbon提供的随机负载算法
+    @Bean
+    public IRule getRandomRule(){
+        return new RandomRule();
+    }
+```
+
+2	启动测试
+
+7004	7005	7006	8008	8009 	8010	ribbon-random-80
+
+验证结果,访问的服务提供者是**随机**出现的,而不是默认的轮询方式
+
+### 自定义Ribbon负载算法[cloud-consumer-department-ribbon-myrule-80]
+
+Ribbon的核心是通过  IRule  接口的具体实现类实现负载均衡的不同算法,自定义的组件会覆盖默认的算法规则,自定义的算法规则**不应该**放在Spring扫描的范围内.
+
+1	创建一个自定义的负载算法类
+
+```java
+//自己定义的算法规则,简单的分配原则,每个服务访问3次后换下一个服务器
+if(total<2){
+    server = upList.get(current);
+    total++;
+}else{
+    total = 0;
+    current++;
+    if(current>=upList.size()){
+        current = 0;
+    }
+    server = upList.get(current);
+}
+```
+
+2	给主启动类添加注解,使自定义的算法规则能够生效,或者使用配置类注入该Bean
+
+```java
+@RibbonClient(name = "CLOUD-PROVIDER-DEPARTMENT",configuration = MyRule.class)
+```
+
+3	启动所有相关服务测试
+
+7004	7005	7006	8008	8009 	8010	ribbon-myrule-80
+
+# Feign负载均衡
+
+Feign是声明式的web service客户端[**面向接口编程**],这样可以弃用原来使用ribbon时通过微服务的名称访问服务这种硬编码方式.我们可以使用Feign提供负载均衡的HTTP客户端,Feign默认调用Ribbon做负载均衡
+
+使用方式: 创建一个接口,添加注解
+
+## Feign的配置
+
+### 涉及模块
+
+ cloud-consumer-department-feign-80
 
 
 
+### 配置步骤
+
+1	创建 cloud-consumer-department-feign-80,根据cloud-consumer-department-ribbon-80改造即可 
+
+2	导入feign的依赖
+
+3	给自定义的接口添加注解  @FeignClient
+
+4	编写对应的接口方法
+
+5	改造controller
+
+6	给主启动类添加注解@EnableFeignClients    和   @ComponentScan[本例中无需添加,因为接口在主启动类能够扫描到的位置]
 
 
-学习资料下载
 
-## git@github.com:wangzhanf/springcloud2021.git
+7	测试
 
-## 使用命令
+7004	7005	7006	8008	8009 	8010	 cloud-consumer-department-feign-80
 
-## git  clone git@github.com:wangzhanf/springcloud2021.git
+# 服务降级和熔断
 
-## 克隆
+## 分布式系统面临的问题
 
-## wangzhanf     我的github账号     王占峰   
+分布式系统环境下，服务间类似依赖非常常见，一个业务调用通常依赖多个基础服务,例如A需要调用B。某些服务B不可用时，调用该服务的A请求线程被阻塞，当有大批量A请求调用该服务时，最终可能导致整个A服务资源耗尽，无法继续对外提供服务。并且这种不可用可能**沿请求调用链向上传递**，这种现象被称为**雪崩效应**。[踩踏现象]
 
-## 1	注册github账号
+ ![img](SpringCloud%E6%8E%88%E8%AF%BE%E7%AC%94%E8%AE%B0.assets/887e7862-578a-3616-a15c-1ef1cb62f3c4.png) 
 
-## 2	配置git
+## 雪崩效应常见场景
 
-### git config --global user.name "wangzhanf"
+硬件故障：如服务器宕机，机房断电，光纤被挖断等。
+流量激增：如异常流量，重试加大流量等。
+缓存穿透：一般发生在应用重启，所有缓存失效时，以及短时间内大量缓存失效时。大量的缓存不命中，使请求直击后端服务，造成服务提供者超负荷运行，引起服务不可用。
+程序BUG：如程序逻辑导致内存泄漏，JVM长时间FullGC等。
+同步等待：服务间采用同步调用模式，同步等待造成的资源耗尽。
 
-### $ git config --global user.email wangzhanf@126.com
+## 应对的策略
 
-### 3	产生秘钥
+针对造成雪崩效应的不同场景，可以使用不同的应对策略，没有一种通用所有场景的策略，参考如下：
 
-###  ssh-keygen -t rsa -C "wangzhanf@126.com"
+硬件故障：多机房容灾、异地多活等。
+流量激增：服务自动扩容、流量控制（限流、关闭重试）等。
+缓存穿透：缓存预加载、缓存异步加载等。
+程序BUG：修改程序bug、及时释放资源等。
+同步等待：资源隔离、MQ解耦、不可用服务调用快速失败等。资源隔离通常指不同服务调用采用不同的线程池；不可用服务调用快速失败一般通过熔断器模式结合超时机制实现。
+综上所述，如果一个应用不能对来自依赖的故障进行隔离，那该应用本身就处在被拖垮的风险中。 因此，为了构建稳定、可靠的分布式系统，我们的服务应当具有自我保护能力，当依赖服务不可用时，当前服务启动自我保护功能，从而避免发生雪崩效应。
 
-### 4	进入  用户宿主目录    找到  .ssh  下的id_rsa.pub   拷贝其中的内容  粘贴到   github上      
+## Hystrix是什么
 
-### 5	通过命令行方式访问远程仓库
+Hystrix解决同步等待的雪崩问题,保证不会因为一个依赖出现问题而导致整体服务失败,避免级联故障,提高分布式系统的弹性.
+
+## Hystrix配置服务熔断
+
+通过采用备选方法提供业务流程,防止出现拥塞等待,服务熔断是在服务端做的工作
+
+1	测试
+
+没有熔断配置前先访问看看会出现何种问题[例如传入了不存在的did]
+
+2	根据cloud-provider-department-8008 改造一个配置Hystrix的服务提供者cloud-provider-department-hystrix-8014
+
+3	修改pom文件导入依赖
+
+```xml
+<!--        Hystrix的依赖-->
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-hystrix</artifactId>
+    <version>1.4.6.RELEASE</version>
+</dependency>
+```
+
+4	修改配置文件
+
+5	修改Controller添加备用的处理方法
+
+6	给主启动类添加  @EnableCircuitBreaker    断路器的注解
+
+7	访问测试
+
+cloud-provider-department-hystrix-8014
+
+7004	7005	7006	cloud-consumer-department-feign-80
+
+## Hystrix配置服务降级
+
+当资源不足时,让客户不去访问某些服务,服务降级是在客户端做的工作
+
+1	根据cloud-consumer-department-feign-80改造一个配置Hystrix的客户端消费者 cloud-consumer-department-feign-hystrix-80
+
+2	客户端创建类实现降级的处理,该类实现FallbackFactory接口,并实现相应的备选方法
+
+3	给客户端的service添加注解,使用创建的备选类
+
+```java
+@FeignClient(value = "CLOUD-PROVIDER-DEPARTMENT",fallbackFactory = DepartmentClientServiceFallbackFactory.class)
+```
+
+4	修改主配置文件启用服务降级
+
+```yaml
+#启用服务降级
+feign:
+  hystrix:
+    enabled: true
+```
+
+5	访问测试
+
+cloud-provider-department-hystrix-8014
+
+7004	7005	7006	cloud-consumer-department-feign-hystrix-80
+
+6	此时关闭cloud-provider-department-hystrix-8014 验证
+
+# 配套学习资料下载
+
+git@github.com:wangzhanf/springcloud2021.git
+
+使用命令
+
+git  clone git@github.com:wangzhanf/springcloud2021.git
+
+克隆
+
+wangzhanf     我的github账号    
+
+# Git的基本使用
+
+1	注册github账号
+
+2	配置git
+
+git config --global user.name "wangzhanf"
+
+$ git config --global user.email wangzhanf@126.com
+
+3	产生秘钥
+
+ssh-keygen -t rsa -C "wangzhanf@126.com"
+
+4	进入  用户宿主目录    找到  .ssh  下的id_rsa.pub   拷贝其中的内容  粘贴到   github上      
+
+5	通过命令行方式访问远程仓库
 
 
 
@@ -619,13 +956,13 @@ Eureka保证的是AP,所有节点平等
 
 IDEA    下载      https://www.jetbrains.com/idea/
 
-## 基本的配置
+基本的配置
 
-### 配置maven
+配置maven
 
-## STS的workspace相当于idea中的project
+STS的workspace相当于idea中的project
 
-## STS的project 相当于 idea中的  module
+STS的project 相当于 idea中的  module
 
 
 
