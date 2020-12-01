@@ -858,7 +858,7 @@ Hystrix解决同步等待的雪崩问题,保证不会因为一个依赖出现问
 
 ## Hystrix配置服务熔断
 
-通过采用备选方法提供业务流程,防止出现拥塞等待,服务熔断是在服务端做的工作
+通过采用备选方法提供业务流程,防止出现拥塞等待,服务熔断是在**服务端**做的工作
 
 1	测试
 
@@ -891,7 +891,7 @@ cloud-provider-department-hystrix-8014
 
 ## Hystrix配置服务降级
 
-当资源不足时,让客户不去访问某些服务,服务降级是在客户端做的工作
+当资源不足时,让客户不去访问某些服务,服务降级是在**客户端**做的工作
 
 1	根据cloud-consumer-department-feign-80改造一个配置Hystrix的客户端消费者 cloud-consumer-department-feign-hystrix-80
 
@@ -918,7 +918,7 @@ cloud-provider-department-hystrix-8014
 
 7004	7005	7006	cloud-consumer-department-feign-hystrix-80
 
-6	此时关闭cloud-provider-department-hystrix-8014 验证
+6	此时关闭cloud-provider-department-hystrix-8014 验证服务关闭后客户端访问的情况
 
 # 配套学习资料下载
 
