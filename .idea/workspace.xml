@@ -1,7 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutomaticModuleUnloader">
+    <loaded-modules>
+      <module name="cloud-api-commons" />
+      <module name="cloud-consumer-department-80" />
+      <module name="cloud-consumer-department-feign-80" />
+      <module name="cloud-consumer-department-feign-hystrix-80" />
+      <module name="cloud-consumer-department-ribbon-80" />
+      <module name="cloud-consumer-department-ribbon-myrule-80" />
+      <module name="cloud-consumer-department-ribbon-random-80" />
+      <module name="cloud-eureka-7001" />
+      <module name="cloud-eureka-7004" />
+      <module name="cloud-eureka-7005" />
+      <module name="cloud-eureka-7006" />
+      <module name="cloud-provider-department-8001" />
+      <module name="cloud-provider-department-8005" />
+      <module name="cloud-provider-department-8008" />
+      <module name="cloud-provider-department-8009" />
+      <module name="cloud-provider-department-8010" />
+      <module name="cloud-provider-department-hystrix-8014" />
+      <module name="springcloud2021" />
+      <module name="cloud-consumer-department-feign-hystrix-dashboard-9001" />
+    </loaded-modules>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bda64ae6-8931-400a-acd3-07fe30d46919" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/SpringCloud授课笔记.assets/image-20201208223324998.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringCloud授课笔记.assets/image-20201208224425121.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringCloud授课笔记.assets/image-20201208233056400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-department-feign-hystrix-dashboard-9001/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-department-feign-hystrix-dashboard-9001/src/main/java/vip/epss/DepartmentConsumerFeignHystrixDashboard_9001.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-department-feign-hystrix-dashboard-9001/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-hystrix-dashboard-8020/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-hystrix-dashboard-8020/src/main/java/vip/epss/DepartmentProviderHystrixDashboard_8020.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-hystrix-dashboard-8020/src/main/java/vip/epss/controller/DepartmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-hystrix-dashboard-8020/src/main/java/vip/epss/dao/DepartmentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-hystrix-dashboard-8020/src/main/java/vip/epss/service/DepartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-hystrix-dashboard-8020/src/main/java/vip/epss/service/impl/DepartmentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-hystrix-dashboard-8020/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-hystrix-dashboard-8020/src/main/resources/mybatis/mapper/DepartmentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-department-hystrix-dashboard-8020/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-zuul-6001/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-zuul-6001/src/main/java/vip/epss/ZuulApp_6001.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-zuul-6001/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringCloud授课笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/SpringCloud授课笔记.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +77,9 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectId" id="1kionbT2YYknAJt77uqzO8KyRtf" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -64,10 +109,14 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3873563" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="vip.epss.service" />
       <recent name="vip.epss.domain" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -81,55 +130,135 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DepartmentProvider_8008">
-    <configuration name="DepartmentConsumer_80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="cloud-consumer-department-80" />
+  <component name="RunManager" selected="Spring Boot.ZuulApp_6001">
+    <configuration name="DepartmentConsumerFeign_80#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/DepartmentConsumerFeign_80.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="DepartmentConsumerFeignHystrixDashboard_9001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-consumer-department-feign-hystrix-dashboard-9001" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="vip.epss.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentConsumerFeignHystrixDashboard_9001" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentConsumerFeignHystrix_80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-consumer-department-feign-hystrix-80" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vip.epss.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentConsumerFeignHystrix_80" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentConsumerFeign_80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-consumer-department-feign-80" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentConsumerFeign_80" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentConsumerRibbonMyrule_80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-consumer-department-ribbon-myrule-80" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentConsumerRibbonMyrule_80" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentConsumerRibbonRandom_80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-consumer-department-ribbon-random-80" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentConsumerRibbonRandom_80" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentConsumerRibbon_80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-consumer-department-ribbon-80" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentConsumerRibbon_80" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentConsumer_80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-consumer-department-80" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentConsumer_80" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepartmentProvider_8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="cloud-provider-department-8001" />
+    <configuration name="DepartmentProviderHystrixDashboard_8018" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-provider-department-hystrix-dashboard-8018" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentProviderHystrixDashboard_8018" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentProviderHystrixDashboard_8020" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-provider-department-hystrix-dashboard-8020" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentProviderHystrixDashboard_8020" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentProviderHystrix_8014" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-provider-department-hystrix-8014" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="vip.epss.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentProviderHystrix_8014" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentProvider_8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-provider-department-8001" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentProvider_8001" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepartmentProvider_8005" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="DepartmentProvider_8005" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cloud-provider-department-8005" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="vip.epss.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentProvider_8005" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepartmentProvider_8008" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="DepartmentProvider_8008" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cloud-provider-department-8008" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentProvider_8008" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentProvider_8009" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-provider-department-8009" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="vip.epss.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentProvider_8008" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentProvider_8009" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentProvider_8010" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-provider-department-8010" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.DepartmentProvider_8010" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,12 +291,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ZuulApp_6001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-zuul-6001" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vip.epss.ZuulApp_6001" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.DepartmentProvider_8005" />
-        <item itemvalue="Spring Boot.DepartmentProvider_8008" />
-        <item itemvalue="Spring Boot.DepartmentProvider_8001" />
-        <item itemvalue="Spring Boot.DepartmentConsumer_80" />
+        <item itemvalue="Spring Boot.DepartmentConsumerFeignHystrixDashboard_9001" />
+        <item itemvalue="Spring Boot.DepartmentConsumerFeignHystrix_80" />
+        <item itemvalue="Spring Boot.DepartmentProviderHystrix_8014" />
+        <item itemvalue="HTTP Request.DepartmentConsumerFeign_80#1" />
+        <item itemvalue="Spring Boot.DepartmentProvider_8009" />
       </list>
     </recent_temporary>
   </component>
@@ -185,8 +322,27 @@
       <workItem from="1606273325652" duration="1180000" />
       <workItem from="1606283981977" duration="2102000" />
       <workItem from="1606342146893" duration="1088000" />
-      <workItem from="1606376325188" duration="1802000" />
+      <workItem from="1606376325188" duration="33145000" />
+      <workItem from="1606666114788" duration="21000" />
+      <workItem from="1606721889520" duration="19208000" />
+      <workItem from="1606829548511" duration="38000" />
+      <workItem from="1607433179470" duration="8165000" />
     </task>
+    <task id="LOCAL-00001" summary="20201201">
+      <created>1606826251431</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606826251431</updated>
+    </task>
+    <task id="LOCAL-00002" summary="20201201-1">
+      <created>1606829570921</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606829570921</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,67 +350,103 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="20201201" />
+    <MESSAGE value="20201201-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="20201201-1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="94" key="#Project_Structure" timestamp="1606273341265">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="587" y="127" key="#Project_Structure" timestamp="1607436263855">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1606273341265" />
+    <state x="587" y="127" key="#Project_Structure/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1607436263855" />
     <state x="621" y="353" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606194505668">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="621" y="353" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606194505668" />
-    <state x="1085" y="415" key="#com.intellij.ide.util.MemberChooser" timestamp="1606201271632">
+    <state x="1085" y="415" key="#com.intellij.ide.util.MemberChooser" timestamp="1606785967697">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1085" y="415" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606201271632" />
-    <state x="530" y="69" key="FileChooserDialogImpl" timestamp="1606293741587">
-      <screen x="0" y="0" width="1280" height="560" />
+    <state x="1085" y="415" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606785967697" />
+    <state x="1010" y="445" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606656026054">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="445" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606656026054" />
+    <state x="639" y="282" key="CommitChangelistDialog2" timestamp="1606829570426">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="639" y="282" key="CommitChangelistDialog2/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606829570426" />
+    <state x="1060" y="454" key="FileChooserDialogImpl" timestamp="1606401099520">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="530" y="69" key="FileChooserDialogImpl/0.0.1280.560@0.0.1280.560" timestamp="1606293741587" />
     <state x="795" y="337" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606293503876" />
-    <state x="1060" y="454" key="FileChooserDialogImpl/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606196976245" />
-    <state width="2044" height="371" key="GridCell.Tab.0.bottom" timestamp="1606377622472">
+    <state x="1060" y="454" key="FileChooserDialogImpl/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606401099520" />
+    <state width="2044" height="615" key="GridCell.Tab.0.bottom" timestamp="1607441945278">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622472" />
-    <state width="2044" height="371" key="GridCell.Tab.0.center" timestamp="1606377622472">
+    <state width="2044" height="615" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1607441945278" />
+    <state width="2044" height="615" key="GridCell.Tab.0.center" timestamp="1607441945278">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.0.center/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622472" />
-    <state width="2044" height="371" key="GridCell.Tab.0.left" timestamp="1606377622472">
+    <state width="2044" height="615" key="GridCell.Tab.0.center/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1607441945278" />
+    <state width="2044" height="615" key="GridCell.Tab.0.left" timestamp="1607441945278">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.0.left/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622472" />
-    <state width="2044" height="371" key="GridCell.Tab.0.right" timestamp="1606377622472">
+    <state width="2044" height="615" key="GridCell.Tab.0.left/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1607441945278" />
+    <state width="2044" height="615" key="GridCell.Tab.0.right" timestamp="1607441945278">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.0.right/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622472" />
-    <state width="2044" height="371" key="GridCell.Tab.1.bottom" timestamp="1606377622473">
+    <state width="2044" height="615" key="GridCell.Tab.0.right/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1607441945278" />
+    <state width="2044" height="615" key="GridCell.Tab.1.bottom" timestamp="1607441945278">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.1.bottom/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622473" />
-    <state width="2044" height="371" key="GridCell.Tab.1.center" timestamp="1606377622473">
+    <state width="2044" height="615" key="GridCell.Tab.1.bottom/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1607441945278" />
+    <state width="2044" height="615" key="GridCell.Tab.1.center" timestamp="1607441945278">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.1.center/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622473" />
-    <state width="2044" height="371" key="GridCell.Tab.1.left" timestamp="1606377622473">
+    <state width="2044" height="615" key="GridCell.Tab.1.center/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1607441945278" />
+    <state width="2044" height="615" key="GridCell.Tab.1.left" timestamp="1607441945278">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.1.left/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622473" />
-    <state width="2044" height="371" key="GridCell.Tab.1.right" timestamp="1606377622473">
+    <state width="2044" height="615" key="GridCell.Tab.1.left/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1607441945278" />
+    <state width="2044" height="615" key="GridCell.Tab.1.right" timestamp="1607441945278">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2044" height="371" key="GridCell.Tab.1.right/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606377622473" />
-    <state x="851" y="514" key="Registry" timestamp="1606200051812">
+    <state width="2044" height="615" key="GridCell.Tab.1.right/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1607441945278" />
+    <state width="2044" height="394" key="GridCell.Tab.2.bottom" timestamp="1606744192639">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="851" y="514" key="Registry/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606200051812" />
-    <state x="383" y="118" key="SettingsEditor" timestamp="1606293507285">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2044" height="394" key="GridCell.Tab.2.bottom/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606744192639" />
+    <state width="2044" height="394" key="GridCell.Tab.2.center" timestamp="1606744192639">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2044" height="394" key="GridCell.Tab.2.center/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606744192639" />
+    <state width="2044" height="394" key="GridCell.Tab.2.left" timestamp="1606744192639">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2044" height="394" key="GridCell.Tab.2.left/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606744192639" />
+    <state width="2044" height="394" key="GridCell.Tab.2.right" timestamp="1606744192639">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2044" height="394" key="GridCell.Tab.2.right/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606744192639" />
+    <state x="851" y="514" key="Registry" timestamp="1606746935166">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="851" y="514" key="Registry/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606746935166" />
+    <state x="614" y="311" key="SettingsEditor" timestamp="1606746922331">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="383" y="118" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606293507285" />
-    <state x="614" y="311" key="SettingsEditor/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606200243391" />
+    <state x="614" y="311" key="SettingsEditor/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606746922331" />
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1606829573190">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606829573190" />
+    <state x="1170" y="573" width="336" height="257" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1606652404159">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1170" y="573" width="336" height="257" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606652404159" />
     <state x="468" y="411" width="972" height="578" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1606195185726">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -264,9 +456,9 @@
     </state>
     <state x="23" y="7" width="1251" height="489" key="new project wizard/0.0.1280.560@0.0.1280.560" timestamp="1606293766658" />
     <state x="650" y="359" key="new project wizard/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606226250091" />
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1606196448591">
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1606656055252">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606196448591" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-1440.0.1440.900@0.0.2560.1400" timestamp="1606656055252" />
   </component>
 </project>

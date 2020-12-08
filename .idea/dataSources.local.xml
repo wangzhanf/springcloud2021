@@ -11,7 +11,11 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="@" />
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="spring_cloud_test_2" />
+            <name qname="spring_cloud_test_3" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>

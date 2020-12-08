@@ -1,0 +1,42 @@
+server:
+  port: 6001
+#Eureka配置
+eureka:
+  client:
+    #表示是否将自己注册进EurekaServer默认为true。
+    register-with-eureka: true
+    #是否从EurekaServer抓取已有的注册信息，默认为true。单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    fetchRegistry: true
+    service-url:
+      #可以从以下服务中心列表中获取对应的服务
+      defaultZone: http://eureka7004.com:7004/eureka/,http://eureka7005.com:7005/eureka/,http://eureka7006.com:7006/eureka/
+  instance:
+    # 修改在服务器上该实例的描述信息
+    instance-id: cloud-zuul-6001
+    # 隐藏真实IP
+    prefer-ip-address: true
+#启用服务降级
+feign:
+  hystrix:
+    enabled: true
+
+
+
+spring:
+  application:
+    name: cloud-zuul
+
+info:
+  app: springcloud2021
+  comp: epss.vip
+  author: epss
+
+# Zuul的配置
+zuul:
+  routes:
+    # 真实的服务名称
+    mydepartment.serviceId: cloud-provider-department
+    # 映射为如下url
+    mydepartment.path: /dept/**
+  ignored-services: cloud-provider-department # 此路径的访问将会被忽略,即禁止通过该路径访问,也可以使用通配符  *  代表所有
+  # prefix: /microservice # 设置公共的前缀,视情况而定

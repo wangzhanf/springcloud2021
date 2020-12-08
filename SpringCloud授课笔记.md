@@ -920,6 +920,130 @@ cloud-provider-department-hystrix-8014
 
 6	此时关闭cloud-provider-department-hystrix-8014 验证服务关闭后客户端访问的情况
 
+## Hystrix的Dashboard流监控
+
+
+
+1	根据cloud-consumer-department-feign-hystrix-80改造一个配置有Hystrix DashBoard的模块cloud-consumer-department-feign-hystrix-dashboard-9001
+
+2	导入dashboard依赖
+
+```xml
+<!--Hystrix的dashboard依赖-->
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+    <version>1.4.6.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+    <version>1.4.6.RELEASE</version>
+</dependency>
+<!--完善监控信息,这个基础的依赖包-->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+```
+
+3	修改cloud-consumer-department-feign-hystrix-dashboard-9001主配置文件
+
+4	修改cloud-consumer-department-feign-hystrix-dashboard-9001主启动类,添加注解开启监控
+
+```java
+@EnableHystrixDashboard //开启监控
+```
+
+5	根据cloud-provider-department-hystrix-8014改造一个 cloud-provider-department-hystrix-dashboard-8020
+
+6	修改cloud-provider-department-hystrix-dashboard-8020主启动类或者配置类添加一个bean
+
+```java
+//增加一个Servlet
+@Bean
+public ServletRegistrationBean getRegistrationBean(){
+    ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new HystrixMetricsStreamServlet());
+    servletRegistrationBean.addUrlMappings("/actuator/hystrix.stream");
+    return servletRegistrationBean;
+}
+```
+
+7	测试
+
+启动9001,7004,7005,7006,8020测试
+
+浏览器访问	http://localhost:9001/hystrix   
+
+浏览器访问	http://localhost:8020/department/opt/1
+
+浏览器访问	http://eureka7004.com:7004/
+
+浏览器访问	http://localhost:8020/actuator/hystrix.stream
+
+填写对应信息后访问 http://localhost:8020/department/opt/1 查看监控信息的变化
+
+![image-20201208223324998](SpringCloud%E6%8E%88%E8%AF%BE%E7%AC%94%E8%AE%B0.assets/image-20201208223324998.png)
+
+
+
+![image-20201208224425121](SpringCloud%E6%8E%88%E8%AF%BE%E7%AC%94%E8%AE%B0.assets/image-20201208224425121.png)
+
+# Zuul路由网关
+
+Zuul包含了对请求的路由和过滤这两个主要功能,以及代理的功能
+
+实现外部访问统一的入口地址
+
+过滤掉不合法的访问方式
+
+Zuul需要和Eureka整合并注册为Eureka的服务
+
+## Zuul配置
+
+1	通过cloud-consumer-department-feign-hystrix-dashboard-9001改造一个cloud-zuul-6001
+
+2	导入Zuul的依赖
+
+```xml
+<!--Zuul的依赖-->
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-zuul</artifactId>
+    <version>1.4.6.RELEASE</version>
+</dependency>
+```
+
+3	修改配置
+
+```xml
+# 具体查看项目文件
+```
+
+4	修改对应的hosts文件
+
+```powershell
+127.0.0.1	testepss.vip
+```
+
+5	修改主启动类,添加注解
+
+```java
+@EnableZuulProxy    //开启Zuul
+```
+
+6	启动 7004,7005,7006,6001,8020测试
+
+浏览器输入	http://testepss.vip:6001/cloud-provider-department/department/opt/1   也可以访问服务了
+
+![image-20201208233056400](SpringCloud%E6%8E%88%E8%AF%BE%E7%AC%94%E8%AE%B0.assets/image-20201208233056400.png)
+
+7	改进,禁止外漏微服务的名称
+
+浏览器输入	http://testepss.vip:6001/cloud-provider-department/department/opt/1   不能访问服务了
+
+如下地址   http://testepss.vip:6001/dept/department/opt/1	可以访问服务
+
 # 配套学习资料下载
 
 git@github.com:wangzhanf/springcloud2021.git

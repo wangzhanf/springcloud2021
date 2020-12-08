@@ -67,8 +67,19 @@
         <!--        <module>cloud-eureka-7005</module>-->
         <!--        <module>cloud-eureka-7006</module>-->
         <!--        <module>cloud-provider-department-hystrix-8014</module>-->
+        <!--11   使用Hystrix流监控dashboard-->
+        <module>cloud-consumer-department-feign-hystrix-dashboard-9001</module>
+        <module>cloud-provider-department-hystrix-dashboard-8020</module>
+        <!--        <module>cloud-eureka-7004</module>-->
+        <!--        <module>cloud-eureka-7005</module>-->
+        <!--        <module>cloud-eureka-7006</module>-->
+        <!--12   使用Zuul路由网关-->
+        <module>cloud-zuul-6001</module>
+        <!--        <module>cloud-provider-department-hystrix-dashboard-8020</module>-->
+        <!--        <module>cloud-eureka-7004</module>-->
+        <!--        <module>cloud-eureka-7005</module>-->
+        <!--        <module>cloud-eureka-7006</module>-->
     </modules>
-
 
 
     <!--    属性定义-->
