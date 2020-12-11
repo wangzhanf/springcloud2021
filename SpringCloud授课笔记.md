@@ -1044,6 +1044,105 @@ Zuul需要和Eureka整合并注册为Eureka的服务
 
 如下地址   http://testepss.vip:6001/dept/department/opt/1	可以访问服务
 
+
+
+# Config进行统一配置
+
+每个微服务都需要配置,如果使用类似多文档块的管理方式,将配置放在统一的配置管理中心管理就方便很多了
+
+Spring Cloud Config为微服务提供了集中化的外部配置管理,Spring Cloud Config 分为**客户端**和**服务器**两种角色,服务器默认采用git进行存储配置信息(HTTP或者HTTPS方式),将配置信息以REST接口的形式暴露
+
+## Config服务端的配置
+
+1	在代码托管仓库创建一个仓库 springcloud2021config
+
+2	将该仓库克隆到本地,并添加配置文件application.yml提交到远程仓库
+
+3	新创建一个module用以作为config的服务端 cloud-config-server-3001
+
+4	导入依赖
+
+5	修改配置文件
+
+6	创建主启动类添加注解   @EnableConfigServer
+
+7	测试
+
+通过浏览器访问	http://localhost:3001/	确保微服务已启动
+
+通过浏览器访问,具体的配置
+
+http://localhost:3001/application/dev/master
+
+http://localhost:3001/application-dev.yml
+
+## Config客户端的配置
+
+1	创建一个配置文件config-client.yml并提交到远程仓库
+
+2	创建一个module	
+
+3	导入依赖 start-config
+
+```xml
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-config</artifactId>
+</dependency>
+```
+
+4	创建配置文件 bootstrap.yml[系统级别的配置]和application.yml[用户级别的配置]
+
+5	创建一个Controller确保能够获取配置
+
+6	创建主启动类	
+
+7	启动测试
+
+本例须启动 3001  和  4001      
+
+通过浏览器访问    http://localhost:3001/config-client/dev/master  或者   http://localhost:3001/config-client-dev.yml 确保config-server正常运行
+
+通过浏览器访问  http://localhost:8030/config  查看能否通过客户端访问到服务器
+
+修改本地application.xml中的配置,将环境切换为其他环境[test],重启4001然后访问 http://localhost:8040/config  测试
+
+## Config配置单机Eureka实例
+
+
+
+1	创建Eureka[config-eureka.yml]和provider[config-provider-department.yml]的配置文件并上传到远程仓库
+
+2	由[cloud-eureka-7004] 改造一个远程config的模块[cloud-eureka-config-7040]
+
+2.1	添加config的依赖
+
+2.2	创建bootstrap.yml和application.yml
+
+2.3	修改主启动类
+
+3	由[cloud-provider-department-8008]改造一个远程config的模块[cloud-provider-department-config-8080]
+
+3.1	添加config的依赖
+
+3.2	创建bootstrap.yml和application.yml
+
+3.3	修改主启动类
+
+4	修改cloud-eureka-config-7040  的配置文件,使用远程访问config方式
+
+启动cloud-config-server-3001	cloud-eureka-config-7040 	cloud-provider-department-config-8080 测试
+
+http://localhost:3001/config-eureka-dev.yml	访问eureka的配置文件
+
+http://localhost:3001/config-provider-department-dev.yml	访问provider的配置文件
+
+通过浏览器访问   http://eureka7040.com:7040/   查看是否能够正确启动eureka服务端以及是否将provider注册入服务中心
+
+通过浏览器访问	http://localhost:8080/department/opt/1	查看能否正确访问服务
+
+切换provider的环境到test查看是否有变化
+
 # 配套学习资料下载
 
 git@github.com:wangzhanf/springcloud2021.git

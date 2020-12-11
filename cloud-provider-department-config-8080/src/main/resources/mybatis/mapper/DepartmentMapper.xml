@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="vip.epss.dao.DepartmentMapper">
+    <insert id="insert" parameterType="department">
+        insert into department (dname,db_source) value (#{dname},DATABASE())
+    </insert>
+
+    <delete id="delete">
+        delete from department where did = #{did}
+    </delete>
+
+    <update id="update" parameterType="department">
+        update department set dname=#{dname} where did=#{did}
+    </update>
+
+    <select id="select" resultType="department">
+        select * from department
+    </select>
+
+    <select id="selectByPrimaryKey" resultType="department">
+        select * from department where did=#{did}
+    </select>
+</mapper>

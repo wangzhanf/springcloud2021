@@ -2,6 +2,10 @@
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/cloud-api-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-config-client-4001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-config-client-4001/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-config-server-3001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-config-server-3001/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-department-80/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-department-80/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-department-feign-80/src/main/java" charset="UTF-8" />
@@ -24,6 +28,8 @@
     <file url="file://$PROJECT_DIR$/cloud-eureka-7005/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-eureka-7006/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-eureka-7006/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-eureka-config-7040/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-eureka-config-7040/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-department-8001/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-department-8001/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-department-8005/src/main/java" charset="UTF-8" />
@@ -34,6 +40,8 @@
     <file url="file://$PROJECT_DIR$/cloud-provider-department-8009/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-department-8010/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-department-8010/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-provider-department-config-8080/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-provider-department-config-8080/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-department-hystrix-8014/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-department-hystrix-8014/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-department-hystrix-dashboard-8020/src/main/java" charset="UTF-8" />

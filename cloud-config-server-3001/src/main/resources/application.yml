@@ -1,0 +1,10 @@
+server:
+  port: 3001
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wangzhanf/springcloud2021config.git #记得这里使用的是HTTPS而不是SSH方式
+

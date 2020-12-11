@@ -79,6 +79,15 @@
         <!--        <module>cloud-eureka-7004</module>-->
         <!--        <module>cloud-eureka-7005</module>-->
         <!--        <module>cloud-eureka-7006</module>-->
+        <!--13   使用Config统一配置中心,server-->
+        <module>cloud-config-server-3001</module>
+        <!--14   使用Config统一配置中心,client-->
+        <module>cloud-config-client-4001</module>
+        <!--        <module>cloud-config-server-3001</module>-->
+        <!--15   使用Config统一配置中心,改造eureka和provider-->
+        <module>cloud-eureka-config-7040</module>
+        <module>cloud-provider-department-config-8080</module>
+        <!--        <module>cloud-config-server-3001</module>-->
     </modules>
 
 

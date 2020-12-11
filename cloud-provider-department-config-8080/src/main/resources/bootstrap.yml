@@ -1,0 +1,11 @@
+# bootstrap.yml是系统级别的配置,优先级高于用户级别的配置
+# 作为客户端应该找config-server去获取配置
+spring:
+  cloud:
+    config:
+      # 完整的构成了  http://localhost:3001/config-client/dev/master
+      uri: http://localhost:3001
+      name: config-provider-department #这是配置文件的名称,记得不包括后缀.yml哦
+      # profile: dev # 本例中启动端口为8080,访问spring_cloud_test数据库
+      profile: test # 本例中启动端口为8080,访问spring_cloud_test_2数据库
+      label: master

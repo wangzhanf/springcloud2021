@@ -1,0 +1,5 @@
+# application.yml是用户级别的配置
+# 该服务启动时要注意启动的端口其实是bootstrap中指向的远程配置文件中被激活的配置对应端口,本例中默认dev环境的7040端口
+spring:
+  application:
+    name: cloud-eureka-config-7040

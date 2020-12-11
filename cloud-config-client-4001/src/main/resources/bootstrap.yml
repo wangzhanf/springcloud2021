@@ -1,0 +1,11 @@
+# bootstrap.yml是系统级别的配置,优先级高于用户级别的配置
+# 作为客户端应该找config-server去获取配置
+spring:
+  cloud:
+    config:
+      # 完整的构成了  http://localhost:3001/config-client/dev/master
+      uri: http://localhost:3001
+      name: config-client
+#      profile: dev # 启动端口为8030
+      profile: test  # 启动端口为8040
+      label: master
