@@ -1066,7 +1066,7 @@ Spring Cloud Config为微服务提供了集中化的外部配置管理,Spring Cl
 
 6	创建主启动类添加注解   @EnableConfigServer
 
-7	测试
+7	测试	启动  cloud-config-server-3001
 
 通过浏览器访问	http://localhost:3001/	确保微服务已启动
 
@@ -1143,7 +1143,9 @@ http://localhost:3001/config-provider-department-dev.yml	访问provider的配置
 
 切换provider的环境到test查看是否有变化
 
-# 配套学习资料下载
+# 附录
+
+## 配套学习资料下载
 
 git@github.com:wangzhanf/springcloud2021.git
 
@@ -1155,7 +1157,7 @@ git  clone git@github.com:wangzhanf/springcloud2021.git
 
 wangzhanf     我的github账号    
 
-# Git的基本使用
+## Git的基本使用
 
 1	注册github账号
 
@@ -1175,7 +1177,7 @@ ssh-keygen -t rsa -C "wangzhanf@126.com"
 
 
 
-# 开发平台的基本构建
+## 开发平台的基本构建
 
 IDEA    下载      https://www.jetbrains.com/idea/
 
