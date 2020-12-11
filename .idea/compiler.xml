@@ -9,25 +9,25 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-eureka-7004" />
         <module name="cloud-provider-department-8001" />
+        <module name="cloud-provider-department-8005" />
         <module name="cloud-provider-department-hystrix-dashboard-8020" />
         <module name="cloud-api-commons" />
         <module name="cloud-eureka-7005" />
-        <module name="cloud-consumer-department-feign-hystrix-80" />
+        <module name="cloud-consumer-department-ribbon-myrule-80" />
         <module name="cloud-zuul-6001" />
-        <module name="cloud-provider-department-hystrix-dashboard-8018" />
         <module name="cloud-eureka-7006" />
         <module name="cloud-consumer-department-feign-80" />
         <module name="cloud-provider-department-hystrix-8014" />
         <module name="cloud-provider-department-8010" />
         <module name="cloud-eureka-7001" />
         <module name="cloud-consumer-department-80" />
-        <module name="cloud-consumer-department-ribbon-myrule-80" />
+        <module name="cloud-consumer-department-feign-hystrix-80" />
         <module name="cloud-consumer-department-ribbon-80" />
         <module name="cloud-consumer-department-ribbon-random-80" />
         <module name="cloud-consumer-department-feign-hystrix-dashboard-9001" />
-        <module name="cloud-provider-department-8009" />
+        <module name="cloud-provider-department-hystrix-dashboard-8018" />
         <module name="cloud-provider-department-8008" />
-        <module name="cloud-provider-department-8005" />
+        <module name="cloud-provider-department-8009" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
